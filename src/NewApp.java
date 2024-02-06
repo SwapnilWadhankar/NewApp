@@ -11,7 +11,7 @@ class NewApp {
             //dbprotocolName:dbenginename://ipaddress:portnumber/dbname
             String url = "jdbc:mysql://localhost:3306/newapp";
             String userName = "root";
-            String passWord = "Li0nelMe$$i@_719449";
+            String passWord = System.getenv("DATABASE_USER_PASSOWRD");
 
             //A Connection is a session between a Java application and a database. It helps to establish a connection with the database.
             connection = DriverManager.getConnection(url,userName,passWord);
